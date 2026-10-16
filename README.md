@@ -40,6 +40,12 @@ Contributions welcome! Open a PR to add/update entries. Keep descriptions factua
 
 
 
+## Sector Overview & Market Dynamics
+
+The **model-serving platform market** was estimated at **$3.06B in 2025** and is forecast to grow at a **43.3% CAGR through 2030** (Technavio); the broader **AI inference market** it sits inside was valued at **$97.2B in 2024** growing at **17.5% CAGR** (Grand View Research), with the narrower MLOps tooling layer at **$2.2B in 2024** growing at **40.5% CAGR**.
+
+The sector is **moderately fragmented — not winner-take-all**. Model serving alone is called fragmented by analysts, who track 21+ competing vendors, and open-source engines (vLLM, SGLang, KServe, Triton) fragment the serving layer further; concentration appears one level down, where AWS + Microsoft + Google hold ~**63%** of cloud infrastructure (Q3 2025, Synergy), making the hyperscalers the incumbent distribution channel rather than a single serving winner. Switching costs are sticky within deployments, but multi-framework support and cloud portability keep the software layer competitive.
+
 ## SaaS/Hosted Platforms
 
 Curated comparison of the leading hosted ML inference / MLOps platforms. All prices are USD unless noted and reflect publicly published rates (list prices, marketplace or procurement listings) as of **October 2026**. Rows are sorted by **company size (descending)** — latest reported revenue where public, otherwise latest disclosed valuation.

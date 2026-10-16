@@ -67,77 +67,36 @@ Curated comparison of the leading hosted ML inference / MLOps platforms. All pri
 
 ## Open-Source GitHub Projects
 
+Every project below is free, self-hostable, and runnable on Kubernetes (directly or via Helm/Operator). Sorted by GitHub ⭐ star count, descending (counts as of **October 2026**) — click a badge to see the stargazers.
 
-
-- **[KServe](https://github.com/kserve/kserve)**  
-
-  **The standard Kubernetes-native model serving platform** — CNCF project with 5,000+ stars. Provides `InferenceService` CRD abstracting autoscaling, networking, health checking, and server configuration. Supports TensorFlow, PyTorch, XGBoost, scikit-learn, ONNX, and Hugging Face. Features **scale-to-zero**, **canary rollouts**, **GPU autoscaling**, and **multi-node inference** for large LLMs . v0.20 adds confidential model serving with TEE hardware attestation and KV cache offloading for vLLM .
-
-
-
-- **[KubeRay / Ray Serve](https://github.com/ray-project/ray)**  
-
-  **Distributed serving on Kubernetes** — Ray Serve builds on Ray to orchestrate multi-model pipelines, heterogeneous GPU workloads, and autoscaling inference services. Excellent for ensemble models combining gradient boosting and neural networks .
-
-
-
-- **[NVIDIA Triton Inference Server](https://github.com/triton-inference-server/server)**  
-
-  **High-performance multi-framework inference server** — supports TensorFlow, PyTorch, ONNX, TensorRT, and tree models via FIL backend. Dynamic batching and GPU optimization. Requires external K8s HPA/KEDA for autoscaling (no built-in elasticity) .
-
-
-
-- **[Seldon Core v2](https://github.com/SeldonIO/seldon-core)**  
-
-  **Kubernetes model deployment with pipeline DAGs** — v2.x is Apache 2.0 licensed (v1.x was BUSL-1.1, verify version before commercial use). Features drift detection, canary rollouts, and native Experiment/Canary objects for A/B testing .
-
-
-
-- **[BentoML](https://github.com/bentoml/BentoML)**  
-
-  **Python-first serving framework** — Runner abstraction for custom inference logic, adaptive batching, and multi-model pipelines. Faster cold starts than KServe for serverless deployments .
+| Project | ⭐ Stars | Description |
+|---|---|---|
+| **[Ollama](https://github.com/ollama/ollama)** | [![GitHub stars](https://img.shields.io/github/stars/ollama/ollama?style=social&color=white)](https://github.com/ollama/ollama/stargazers) | Run and manage LLMs locally with a single command; OpenAI-compatible API, GPU offload, and community Helm charts for Kubernetes. |
+| **[vLLM](https://github.com/vllm-project/vllm)** | [![GitHub stars](https://img.shields.io/github/stars/vllm-project/vllm?style=social&color=white)](https://github.com/vllm-project/vllm/stargazers) | **Production-default LLM inference engine** — PagedAttention for memory-efficient KV cache management, continuous batching, and prefix caching. Red Hat is the largest corporate contributor. |
+| **[LocalAI](https://github.com/mudler/LocalAI)** | [![GitHub stars](https://img.shields.io/github/stars/mudler/LocalAI?style=social&color=white)](https://github.com/mudler/LocalAI/stargazers) | Drop-in **OpenAI-API-compatible self-hosted inference server** for LLMs, image, audio and embeddings — runs on CPU or GPU, ships with Helm charts. |
+| **[Ray / Ray Serve](https://github.com/ray-project/ray)** | [![GitHub stars](https://img.shields.io/github/stars/ray-project/ray?style=social&color=white)](https://github.com/ray-project/ray/stargazers) | **Distributed serving on Kubernetes** — Ray Serve orchestrates multi-model pipelines, heterogeneous GPU workloads, and autoscaling inference services. Great for ensembles combining gradient boosting and neural networks. |
+| **[SGLang](https://github.com/sgl-project/sglang)** | [![GitHub stars](https://img.shields.io/github/stars/sgl-project/sglang?style=social&color=white)](https://github.com/sgl-project/sglang/stargazers) | **Fastest inference engine for chat and agents** — RadixAttention for KV cache reuse across related requests, native disaggregated inference support. |
+| **[MLflow](https://github.com/mlflow/mlflow)** | [![GitHub stars](https://img.shields.io/github/stars/mlflow/mlflow?style=social&color=white)](https://github.com/mlflow/mlflow/stargazers) | Open-source **MLOps platform** — model registry, deployment tooling, and an AI Gateway for versioning, serving and monitoring models across clouds. |
+| **[ONNX Runtime](https://github.com/microsoft/onnxruntime)** | [![GitHub stars](https://img.shields.io/github/stars/microsoft/onnxruntime?style=social&color=white)](https://github.com/microsoft/onnxruntime/stargazers) | Microsoft's **cross-platform inference accelerator** — runs optimized ONNX graphs on CPU/GPU/edge; powers many serving stacks underneath. |
+| **[Kubeflow](https://github.com/kubeflow/kubeflow)** | [![GitHub stars](https://img.shields.io/github/stars/kubeflow/kubeflow?style=social&color=white)](https://github.com/kubeflow/kubeflow/stargazers) | **ML toolkit for Kubernetes** including Pipelines, Katib (hyperparameter training), and the KFServing lineage that became KServe. |
+| **[NVIDIA TensorRT-LLM](https://github.com/NVIDIA/TensorRT-LLM)** | [![GitHub stars](https://img.shields.io/github/stars/NVIDIA/TensorRT-LLM?style=social&color=white)](https://github.com/NVIDIA/TensorRT-LLM/stargazers) | **NVIDIA's LLM inference library** — TensorRT optimizations, in-flight batching, and quantization (FP8/INT4/SmoothQuant); pairs with the Triton TensorRT-LLM backend. |
+| **[OpenLLM](https://github.com/bentoml/OpenLLM)** | [![GitHub stars](https://img.shields.io/github/stars/bentoml/OpenLLM?style=social&color=white)](https://github.com/bentoml/OpenLLM/stargazers) | **Deploy open LLMs in production** — optimized serving configs, OpenAI-compatible endpoints, and Kubernetes/BentoCloud deployment targets. |
+| **[LMCache](https://github.com/LMCache/LMCache)** | [![GitHub stars](https://img.shields.io/github/stars/LMCache/LMCache?style=social&color=white)](https://github.com/LMCache/LMCache/stargazers) | **Distributed KV cache layer** for LLM serving; integrates with KServe for reduced TTFT and better multi-turn QA performance. |
+| **[NVIDIA Triton Inference Server](https://github.com/triton-inference-server/server)** | [![GitHub stars](https://img.shields.io/github/stars/triton-inference-server/server?style=social&color=white)](https://github.com/triton-inference-server/server/stargazers) | **High-performance multi-framework inference server** — TensorFlow, PyTorch, ONNX, TensorRT and FIL backends with dynamic batching. Needs external K8s HPA/KEDA for autoscaling. |
+| **[Hugging Face TGI](https://github.com/huggingface/text-generation-inference)** | [![GitHub stars](https://img.shields.io/github/stars/huggingface/text-generation-inference?style=social&color=white)](https://github.com/huggingface/text-generation-inference/stargazers) | **LLM serving from Hugging Face** — token streaming, continuous batching and quantization (AWQ/GPTQ/bitsandbytes); the backend of official Inference Endpoints. |
+| **[BentoML](https://github.com/bentoml/BentoML)** | [![GitHub stars](https://img.shields.io/github/stars/bentoml/BentoML?style=social&color=white)](https://github.com/bentoml/BentoML/stargazers) | **Python-first serving framework** — Runner abstraction, adaptive batching and multi-model pipelines with faster cold starts than KServe for serverless deployments. |
+| **[NVIDIA Dynamo](https://github.com/ai-dynamo/dynamo)** | [![GitHub stars](https://img.shields.io/github/stars/ai-dynamo/dynamo?style=social&color=white)](https://github.com/ai-dynamo/dynamo/stargazers) | **Production-grade disaggregated inference framework** — native prefill/decode separation with RDMA/NVLink KV cache transfer on vLLM, SGLang and TensorRT-LLM. |
+| **[TensorFlow Serving](https://github.com/tensorflow/serving)** | [![GitHub stars](https://img.shields.io/github/stars/tensorflow/serving?style=social&color=white)](https://github.com/tensorflow/serving/stargazers) | **Battle-tested TF model server** — batching, GPU inference and multi-version model management; the original production inference system. |
+| **[KServe](https://github.com/kserve/kserve)** | [![GitHub stars](https://img.shields.io/github/stars/kserve/kserve?style=social&color=white)](https://github.com/kserve/kserve/stargazers) | **The standard Kubernetes-native model serving platform** — CNCF project. `InferenceService` CRD with scale-to-zero, canary rollouts, GPU autoscaling and the OpenAI-compatible `LLMInferenceService`. |
+| **[Hugging Face TEI](https://github.com/huggingface/text-embeddings-inference)** | [![GitHub stars](https://img.shields.io/github/stars/huggingface/text-embeddings-inference?style=social&color=white)](https://github.com/huggingface/text-embeddings-inference/stargazers) | **Embedding & reranker serving** — fast cold starts for GTE/BGE/E5 style models with ONNX backends; the workhorse behind RAG retrieval. |
+| **[llm-d](https://github.com/llm-d/llm-d)** | [![GitHub stars](https://img.shields.io/github/stars/llm-d/llm-d?style=social&color=white)](https://github.com/llm-d/llm-d/stargazers) | **Kubernetes-native distributed inference scheduler** for disaggregated prefill/decode; complements KServe with cluster-wide KV-cache-aware routing. |
+| **[Seldon Core v2](https://github.com/SeldonIO/seldon-core)** | [![GitHub stars](https://img.shields.io/github/stars/SeldonIO/seldon-core?style=social&color=white)](https://github.com/SeldonIO/seldon-core/stargazers) | **Kubernetes model deployment with pipeline DAGs** — v2.x is Apache 2.0 (v1.x was BUSL-1.1). Drift detection, canary rollouts and Experiment objects for A/B testing. |
+| **[TorchServe](https://github.com/pytorch/serve)** | [![GitHub stars](https://img.shields.io/github/stars/pytorch/serve?style=social&color=white)](https://github.com/pytorch/serve/stargazers) | **PyTorch's native model server** (AWS & Meta) — multi-model serving, workflow pipelines, and Kubernetes-friendly gRPC/REST APIs. |
+| **[MLOX](https://github.com/MLOX/MLOX)** | [![GitHub stars](https://img.shields.io/github/stars/MLOX/MLOX?style=social&color=white)](https://github.com/MLOX/MLOX/stargazers) | **Open-source MLOps for small teams and research** — backend-agnostic orchestration (Docker, Kubernetes, Native) to deploy MLflow, Airflow and MLServer from one CLI. |
 
 
 
-- **[vLLM](https://github.com/vllm-project/vllm)**  
-
-  **Production-default LLM inference engine** — PagedAttention for memory-efficient KV cache management, continuous batching, and prefix caching. Red Hat is largest corporate contributor .
-
-
-
-- **[SGLang](https://github.com/sgl-project/sglang)**  
-
-  **Fastest inference engine for chat and agents** — RadixAttention for KV cache reuse across related requests. Native disaggregated inference support .
-
-
-
-- **[NVIDIA Dynamo](https://github.com/ai-dynamo/dynamo)**  
-
-  **Production-grade disaggregated inference framework** — native prefill/decode separation with RDMA/NVLink KV cache transfer. Supports vLLM, SGLang, and TensorRT-LLM backends at data center scale .
-
-
-
-- **[MLOX](https://github.com/MLOX/MLOX)**  
-
-  **Open-source MLOps for small teams and research** — backend-agnostic orchestration supporting Docker, Kubernetes, Native, and Connector backends. Service-centric model: deploy MLflow, Airflow, OpenBao, and MLServer with simple CLI commands. Integrated secrets management and TLS termination. Best for development and testing phases, not large-scale production .
-
-
-
-### Additional Strong Open-Source Options
-
-
-
-- **[Kubeflow](https://github.com/kubeflow/kubeflow)** — ML toolkit for Kubernetes including Pipelines, Katib (hyperparameter tuning), and KFServing (KServe predecessor) .
-
-- **[NVIDIA NIM](https://www.nvidia.com/en-us/ai/)** — Optimized inference microservices for foundation models; pairs with KServe for deployment orchestration .
-
-- **[Hugging Face TGI](https://github.com/huggingface/text-generation-inference)** — LLM serving with token streaming, continuous batching, and quantization support.
-
-- **[llm-d](https://github.com/llm-d/llm-d)** — Kubernetes-native distributed inference scheduler for disaggregated prefill/decode workloads; complements KServe for cluster-wide KV-cache-aware routing .
-
-- **[LMCache](https://github.com/LMCache/LMCache)** — Distributed KV cache layer for LLM serving; integrates with KServe for reduced TTFT and improved multi-turn QA performance .
-
-
+> 📦 **Also worth knowing:** [**NVIDIA NIM**](https://www.nvidia.com/en-us/ai/) ships the same optimized inference microservices as a **commercial** (non-open-source) product — deployable on Kubernetes via the KServe/OSM ecosystem. [**Kubeflow Pipelines**](https://github.com/kubeflow/pipelines) (4.2k ⭐) and [**TensorRT-LLM Triton backend**](https://github.com/triton-inference-server/tensorrtllm_backend) (945 ⭐) are strong companion projects, as are [**Feast**](https://github.com/feast-dev/feast) (7.3k ⭐) for feature serving.
 
 **Frameworks for building custom systems**: Combine **KServe** for model lifecycle orchestration, **vLLM** or **SGLang** for inference execution, **llm-d** for cluster-wide routing, and **KEDA** for LLM-specific autoscaling. For multi-framework deployments, layer **Triton** with **KServe** for ensemble models. For lightweight MLOps on Kubernetes, **MLOX** provides integrated secrets and service orchestration .
 

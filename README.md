@@ -1,10 +1,18 @@
-# Awesome-Kubernetes-ML-Inference
+<!--
+  SEO metadata — Kubernetes ML Inference, LLM serving, model deployment
+  title: Awesome Kubernetes ML Inference — LLM & Model Serving on Kubernetes (2026)
+  description: The largest curated list of Kubernetes ML inference tools: 10 SaaS model-serving platforms (Vertex AI, SageMaker, Databricks) with pricing compared side by side, plus 22+ open-source LLM serving engines (vLLM, SGLang, KServe, Triton) sorted by GitHub stars.
+  keywords: kubernetes ml inference, kubernetes machine learning inference, llm serving kubernetes, model serving kubernetes, llm inference platform, gpu inference kubernetes, kubernetes model deployment, kubernetes llm serving, vllm kubernetes, sglang, kserve, seldon, triton inference server, bentoml, ml inference saas, mlops platforms, ai inference pricing, scale to zero inference, gpu autoscaling, awesome list
+  robots: index, follow
+-->
+
+# Awesome Kubernetes ML Inference 🚀 LLM & Model Serving on Kubernetes
 
 ## Top Kubernetes ML Inference Ecosystem
 
 
 
-**Curated List of SaaS Products & Open-Source GitHub Projects**  
+**The curated list of Kubernetes ML inference platforms — SaaS model-serving products & open-source LLM serving projects, compared**  
 
 *Focused on Model Serving, GPU Optimization & Production Inference at Scale*  
 
@@ -12,7 +20,11 @@
 
 
 
-This repository tracks notable **SaaS platforms** and **open-source projects** for **Kubernetes ML Inference**. These tools deploy, scale, and serve machine learning models — from traditional predictive models to large language models — on Kubernetes with production-grade autoscaling, GPU optimization, and intelligent routing.
+This repository tracks notable **SaaS platforms** and **open-source projects** for **Kubernetes ML inference** — the tooling layer that deploys, scales and serves machine learning models, from classical predictive models to large language models (LLMs), on Kubernetes with production-grade autoscaling, GPU optimization and intelligent request routing.
+
+
+
+If you are searching for **LLM serving on Kubernetes**, **GPU inference servers**, or the **best model-serving platform** for your stack, start with the [SaaS comparison table](#saas-hosted-platforms) (prices and free tiers) and the [open-source star-ranked table](#open-source-github-projects) (vLLM, SGLang, KServe, Triton, BentoML and 18 more).
 
 
 
@@ -28,11 +40,15 @@ Contributions welcome! Open a PR to add/update entries. Keep descriptions factua
 
 
 
-## Table of Contents
+## 📑 Table of Contents
+
+- [Sector Overview & Market Dynamics](#sector-overview--market-dynamics)
 
 - [SaaS/Hosted Platforms](#saas-hosted-platforms)
 
 - [Open-Source GitHub Projects](#open-source-github-projects)
+
+- [Kubernetes ML Inference — Frequently Asked Questions](#kubernetes-ml-inference--frequently-asked-questions)
 
 - [How to Contribute](#how-to-contribute)
 
@@ -103,6 +119,30 @@ Every project below is free, self-hostable, and runnable on Kubernetes (directly
 
 
 **Key architectural insight**: The serving stack is layered — **KServe** handles deployment lifecycle and governance, **vLLM/SGLang** handle efficient execution, **llm-d** adds cluster-wide cache-aware routing, and **Triton** serves multi-framework predictive models. For LLM workloads, KServe's `LLMInferenceService` provides OpenAI-compatible endpoints (`/v1/chat/completions`, `/v1/responses`) with KV cache offloading and multi-node tensor parallelism .
+
+
+
+## Kubernetes ML Inference — Frequently Asked Questions
+
+### What is Kubernetes ML inference?
+
+Kubernetes ML inference is the practice of serving trained machine learning models — embeddings, classical predictors and large language models — from workloads running on Kubernetes, using autoscaling (HPA/KEDA), GPU scheduling and networking primitives instead of a proprietary managed endpoint.
+
+### Which is the best LLM inference engine for Kubernetes in 2026?
+
+**vLLM** (94k ⭐) is the production default for most teams thanks to PagedAttention and continuous batching; **SGLang** (37k ⭐) is the fastest option for multi-turn chat and agent workloads; pair either with **KServe** for Kubernetes-native deployment lifecycle, **llm-d** for cluster-wide KV-cache-aware routing, or **NVIDIA Dynamo** for disaggregated prefill/decode at data-center scale.
+
+### What does a model-serving platform cost?
+
+Hosted options start cheap and scale fast: AWS SageMaker real-time inference from **$0.05/hour** per ML instance, Vertex AI custom endpoints from **$0.077/hour**, Databricks Model Serving at **10.48 DBU/hour** on a T4 GPU, while enterprise MLOps suites (Domino, DataRobot, Dataiku) start at **$20k–$100k+ per year**. The [SaaS table](#saas-hosted-platforms) lists exact starting prices and free-tier limits for all 10 platforms.
+
+### Are there free options for running LLM inference on Kubernetes?
+
+Yes — the entire [open-source table](#open-source-github-projects) is free to self-host: vLLM, SGLang, KServe, Triton, BentoML, TorchServe, TensorFlow Serving, TGI and more are Apache-2.0/BSD licensed and safe for commercial use.
+
+### How do I autoscale GPU inference on Kubernetes?
+
+Combine KServe's `InferenceService` autoscaler or KEDA with metrics-aware scaling; vLLM exposes Prometheus metrics for queue-depth-based scale-up, and llm-d adds cluster-wide KV-cache-aware routing so replica counts follow cache locality rather than raw CPU load.
 
 
 

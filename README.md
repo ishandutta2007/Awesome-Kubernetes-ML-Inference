@@ -12,7 +12,7 @@
 
 # Awesome Kubernetes ML Inference 🚀 LLM & Model Serving on Kubernetes
 
-## Top Kubernetes ML Inference Ecosystem
+## 🌐 Top Kubernetes ML Inference Ecosystem
 
 
 
@@ -46,27 +46,27 @@ Contributions welcome! Open a PR to add/update entries. Keep descriptions factua
 
 ## 📑 Table of Contents
 
-- [Sector Overview & Market Dynamics](#sector-overview--market-dynamics)
+- [📊 Sector Overview & Market Dynamics](#sector-overview--market-dynamics)
 
-- [SaaS/Hosted Platforms](#saas-hosted-platforms)
+- [☁️ SaaS/Hosted Platforms](#saas-hosted-platforms)
 
-- [Open-Source GitHub Projects](#open-source-github-projects)
+- [🧰 Open-Source GitHub Projects](#open-source-github-projects)
 
-- [Kubernetes ML Inference — Frequently Asked Questions](#kubernetes-ml-inference--frequently-asked-questions)
+- [❓ Kubernetes ML Inference — Frequently Asked Questions](#kubernetes-ml-inference--frequently-asked-questions)
 
-- [How to Contribute](#how-to-contribute)
+- [🤝 How to Contribute](#how-to-contribute)
 
-- [Disclaimer](#disclaimer)
+- [⚠️ Disclaimer](#disclaimer)
 
 
 
-## Sector Overview & Market Dynamics
+## 📊 Sector Overview & Market Dynamics
 
 The **model-serving platform market** was estimated at **$3.06B in 2025** and is forecast to grow at a **43.3% CAGR through 2030** (Technavio); the broader **AI inference market** it sits inside was valued at **$97.2B in 2024** growing at **17.5% CAGR** (Grand View Research), with the narrower MLOps tooling layer at **$2.2B in 2024** growing at **40.5% CAGR**.
 
 The sector is **moderately fragmented — not winner-take-all**. Model serving alone is called fragmented by analysts, who track 21+ competing vendors, and open-source engines (vLLM, SGLang, KServe, Triton) fragment the serving layer further; concentration appears one level down, where AWS + Microsoft + Google hold ~**63%** of cloud infrastructure (Q3 2025, Synergy), making the hyperscalers the incumbent distribution channel rather than a single serving winner. Switching costs are sticky within deployments, but multi-framework support and cloud portability keep the software layer competitive.
 
-## SaaS/Hosted Platforms
+## ☁️ SaaS/Hosted Platforms
 
 Curated comparison of the leading hosted ML inference / MLOps platforms. All prices are USD unless noted and reflect publicly published rates (list prices, marketplace or procurement listings) as of **October 2026**. Rows are sorted by **company size (descending)** — latest reported revenue where public, otherwise latest disclosed valuation.
 
@@ -85,7 +85,7 @@ Curated comparison of the leading hosted ML inference / MLOps platforms. All pri
 
 
 
-## Open-Source GitHub Projects
+## 🧰 Open-Source GitHub Projects
 
 Every project below is free, self-hostable, and runnable on Kubernetes (directly or via Helm/Operator). Sorted by GitHub ⭐ Stars_Count, descending (counts as of **October 2026**) — click a badge to see the stargazers.
 
@@ -118,67 +118,67 @@ Every project below is free, self-hostable, and runnable on Kubernetes (directly
 
 > 📦 **Also worth knowing:** [**NVIDIA NIM**](https://www.nvidia.com/en-us/ai/) ships the same optimized inference microservices as a **commercial** (non-open-source) product — deployable on Kubernetes via the KServe/OSM ecosystem. [**Kubeflow Pipelines**](https://github.com/kubeflow/pipelines) (4.2k ⭐) and [**TensorRT-LLM Triton backend**](https://github.com/triton-inference-server/tensorrtllm_backend) (945 ⭐) are strong companion projects, as are [**Feast**](https://github.com/feast-dev/feast) (7.3k ⭐) for feature serving.
 
-**Frameworks for building custom systems**: Combine **KServe** for model lifecycle orchestration, **vLLM** or **SGLang** for inference execution, **llm-d** for cluster-wide routing, and **KEDA** for LLM-specific autoscaling. For multi-framework deployments, layer **Triton** with **KServe** for ensemble models. For lightweight MLOps on Kubernetes, **MLOX** provides integrated secrets and service orchestration .
+🧩 **Frameworks for building custom systems**: Combine **KServe** for model lifecycle orchestration, **vLLM** or **SGLang** for inference execution, **llm-d** for cluster-wide routing, and **KEDA** for LLM-specific autoscaling. For multi-framework deployments, layer **Triton** with **KServe** for ensemble models. For lightweight MLOps on Kubernetes, **MLOX** provides integrated secrets and service orchestration .
 
 
 
-**Key architectural insight**: The serving stack is layered — **KServe** handles deployment lifecycle and governance, **vLLM/SGLang** handle efficient execution, **llm-d** adds cluster-wide cache-aware routing, and **Triton** serves multi-framework predictive models. For LLM workloads, KServe's `LLMInferenceService` provides OpenAI-compatible endpoints (`/v1/chat/completions`, `/v1/responses`) with KV cache offloading and multi-node tensor parallelism .
+🧠 **Key architectural insight**: The serving stack is layered — **KServe** handles deployment lifecycle and governance, **vLLM/SGLang** handle efficient execution, **llm-d** adds cluster-wide cache-aware routing, and **Triton** serves multi-framework predictive models. For LLM workloads, KServe's `LLMInferenceService` provides OpenAI-compatible endpoints (`/v1/chat/completions`, `/v1/responses`) with KV cache offloading and multi-node tensor parallelism .
 
 
 
-## Kubernetes ML Inference — Frequently Asked Questions
+## ❓ Kubernetes ML Inference — Frequently Asked Questions
 
-### What is Kubernetes ML inference?
+### ❓ What is Kubernetes ML inference?
 
 Kubernetes ML inference is the practice of serving trained machine learning models — embeddings, classical predictors and large language models — from workloads running on Kubernetes, using autoscaling (HPA/KEDA), GPU scheduling and networking primitives instead of a proprietary managed endpoint.
 
-### Which is the best LLM inference engine for Kubernetes in 2026?
+### 🏆 Which is the best LLM inference engine for Kubernetes in 2026?
 
 **vLLM** (94k ⭐) is the production default for most teams thanks to PagedAttention and continuous batching; **SGLang** (37k ⭐) is the fastest option for multi-turn chat and agent workloads; pair either with **KServe** for Kubernetes-native deployment lifecycle, **llm-d** for cluster-wide KV-cache-aware routing, or **NVIDIA Dynamo** for disaggregated prefill/decode at data-center scale.
 
-### What does a model-serving platform cost?
+### 💰 What does a model-serving platform cost?
 
 Hosted options start cheap and scale fast: AWS SageMaker real-time inference from **$0.05/hour** per ML instance, Vertex AI custom endpoints from **$0.077/hour**, Databricks Model Serving at **10.48 DBU/hour** on a T4 GPU, while enterprise MLOps suites (Domino, DataRobot, Dataiku) start at **$20k–$100k+ per year**. The [SaaS table](#saas-hosted-platforms) lists exact starting prices and free-tier limits for all 10 platforms.
 
-### Are there free options for running LLM inference on Kubernetes?
+### 🆓 Are there free options for running LLM inference on Kubernetes?
 
 Yes — the entire [open-source table](#open-source-github-projects) is free to self-host: vLLM, SGLang, KServe, Triton, BentoML, TorchServe, TensorFlow Serving, TGI and more are Apache-2.0/BSD licensed and safe for commercial use.
 
-### How do I autoscale GPU inference on Kubernetes?
+### 📈 How do I autoscale GPU inference on Kubernetes?
 
 Combine KServe's `InferenceService` autoscaler or KEDA with metrics-aware scaling; vLLM exposes Prometheus metrics for queue-depth-based scale-up, and llm-d adds cluster-wide KV-cache-aware routing so replica counts follow cache locality rather than raw CPU load.
 
 
 
-## How to Contribute
+## 🤝 How to Contribute
 
 
 
-1. Fork the repo.
+1. 🍴 Fork the repo.
 
-2. Add/edit entries in `README.md` (follow existing format).
+2. ✍️ Add/edit entries in `README.md` (follow existing format).
 
-3. Include: name, link, 1–2 sentence description, and whether it's SaaS or open-source.
+3. 📋 Include: name, link, 1–2 sentence description, and whether it's SaaS or open-source.
 
-4. Submit PR with a short explanation.
-
-
-
-Star the repo if you find it useful!
+4. 🚀 Submit PR with a short explanation.
 
 
 
-## Disclaimer
+⭐ Star the repo if you find it useful!
 
 
 
-- This is a **community-curated** list — not exhaustive and not an endorsement.
+## ⚠️ Disclaimer
 
-- **License awareness is critical**: Seldon Core v1.x is BUSL-1.1 (restricts commercial hosting); v2.x is Apache 2.0. KServe, Triton, BentoML, Ray, vLLM, and SGLang are Apache 2.0 or BSD — safe for commercial use .
 
-- Kubernetes ML inference requires GPU capacity planning, KV cache management, and proper autoscaling configuration for production workloads.
 
-- Self-hosted solutions require Kubernetes operational expertise and regular security updates.
+- 🌍 This is a **community-curated** list — not exhaustive and not an endorsement.
+
+- 📜 **License awareness is critical**: Seldon Core v1.x is BUSL-1.1 (restricts commercial hosting); v2.x is Apache 2.0. KServe, Triton, BentoML, Ray, vLLM, and SGLang are Apache 2.0 or BSD — safe for commercial use .
+
+- ⚙️ Kubernetes ML inference requires GPU capacity planning, KV cache management, and proper autoscaling configuration for production workloads.
+
+- 🔒 Self-hosted solutions require Kubernetes operational expertise and regular security updates.
 
 
 

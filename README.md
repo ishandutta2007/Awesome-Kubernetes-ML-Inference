@@ -19,6 +19,7 @@
   <a href="https://github.com/ishandutta2007/Awesome-Kubernetes-ML-Inference/issues"><img alt="GitHub issues" src="https://img.shields.io/github/issues/ishandutta2007/Awesome-Kubernetes-ML-Inference?style=flat-square&logo=github"></a>
   <a href="LICENSE"><img alt="License: MIT" src="https://img.shields.io/github/license/ishandutta2007/Awesome-Kubernetes-ML-Inference?style=flat-square"></a>
   <a href="https://github.com/ishandutta2007/Awesome-Kubernetes-ML-Inference/pulls"><img alt="PRs Welcome" src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square"></a>
+  <a href="https://github.com/ishandutta2007"><img alt="GitHub followers" src="https://img.shields.io/github/followers/ishandutta2007?label=Follow" /></a>
 </p>
 
 ## 🌐 Top Kubernetes ML Inference Ecosystem

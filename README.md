@@ -198,6 +198,16 @@ Combine KServe's `InferenceService` autoscaler or KEDA with metrics-aware scalin
 
 
 
+## 🙏 Support
+
+Thank you for reading! If you find this list useful, please **⭐ star** the repository, **🔱 fork** it, and **share** it with your ML engineers, platform architects and friends — every star helps the project reach more people.
+
+If you'd like to go one step further, you can **buy me a coffee** ☕ to support continued curation and updates:
+
+👉 **[Buy a coffee on the GitHub Sponsor Dashboard](https://github.com/sponsors/ishandutta2007)** 👈
+
+
+
 ---
 
 

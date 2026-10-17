@@ -192,6 +192,12 @@ Combine KServe's `InferenceService` autoscaler or KEDA with metrics-aware scalin
 
 
 
+## 📈 Star History
+
+[![Star History Chart](https://star-history.dera.page/svg?repos=ishandutta2007/Awesome-Kubernetes-ML-Inference&type=date&legend=top-left)](https://star-history.dera.page/#ishandutta2007/Awesome-Kubernetes-ML-Inference&type=date&legend=top-left)
+
+
+
 ---
 
 

@@ -6,6 +6,10 @@
   robots: index, follow
 -->
 
+<p align="center">
+  <img src="assets/banner.svg" alt="Awesome Kubernetes ML Inference — animated banner: LLM & Model Serving on Kubernetes" width="100%">
+</p>
+
 # Awesome Kubernetes ML Inference 🚀 LLM & Model Serving on Kubernetes
 
 ## Top Kubernetes ML Inference Ecosystem
